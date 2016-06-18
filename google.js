@@ -1,4 +1,24 @@
 var googleTrends = require('google-trends-api');
+var prompt = require('prompt');
+
+prompt.start();
+
+prompt.get(['search'], function (err, result) {
+
+    if (err) { return onErr(err); }
+    
+    var search = result.search;
+
+    googleTrends.trendData(result.search,'US')
+         .then(function(results){
+             console.log(results);
+         })
+         .catch(function(err){
+             console.log(err);
+    });
+
+});
+
 var airports = [
     {"code":"DFW", "city":"Dallas"},
     {"code":"LAX", "city":"Los Angeles"}, 
@@ -22,13 +42,13 @@ var airports = [
     {"code":"JFK", "city":"New York"},
 ];
 
-googleTrends.trendData('OJ Simpson','US')
-	.then(function(results){
-	    console.log(results);
-	})
-	.catch(function(err){
-	    console.log(err);
-});
+// googleTrends.trendData('OJ Simpson','US')
+// 	.then(function(results){
+// 	    console.log(results);
+// 	})
+// 	.catch(function(err){
+// 	    console.log(err);
+// });
 
 // googleTrends.trendData('cheap flight to New York','US')
 // 	.then(function(results){
