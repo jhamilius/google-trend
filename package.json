@@ -1,0 +1,23 @@
+{
+  "name": "google-trend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "google.js",
+  "dependencies": {
+    "google-trends-api": "^1.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhamilius/google-trend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhamilius/google-trend/issues"
+  },
+  "homepage": "https://github.com/jhamilius/google-trend#readme"
+}
