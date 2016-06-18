@@ -24,13 +24,13 @@ var airports = [
     {"code":"JFK", "city":"New York"},
 ]
 
-googleTrends.trendData('OJ Simpson','US')
-	.then(function(results){
-	    console.log(results);
-	})
-	.catch(function(err){
-	    console.log(err);
-});
+// googleTrends.trendData('OJ Simpson','US')
+// 	.then(function(results){
+// 	    console.log(results);
+// 	})
+// 	.catch(function(err){
+// 	    console.log(err);
+// });
 
 // googleTrends.trendData('cheap flight to New York','US')
 // 	.then(function(results){
@@ -74,16 +74,16 @@ googleTrends.trendData('OJ Simpson','US')
 
 
 
-// for (i= 0; i < airports.length; i++) {
+for (i= 0; i < airports.length; i++) {
 
-// 	// console.log(airports[i].code + ':' + airports[i].city )
-// 	googleTrends.trendData('cheap flight to' + airports[i].city,'US')
-// 		.then(function(results){
-// 			console.log(results);
-// 		})
-// 		.catch(function(err){
-// 			console.error(err);
-// 		});
+	// console.log(airports[i].code + ':' + airports[i].city )
+	googleTrends.trendData('cheap flight to' + airports[i].city,'US')
+		.then(function(results){
+			console.log(results);
+		})
+		.catch(function(err){
+			console.error(err);
+		});
 
-// }
+}
 
