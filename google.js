@@ -1,6 +1,4 @@
 var googleTrends = require('google-trends-api');
-
-
 var airports = [
     {"code":"DFW", "city":"Dallas"},
     {"code":"LAX", "city":"Los Angeles"}, 
@@ -22,15 +20,15 @@ var airports = [
     {"code":"PHL", "city":"Philadelphia"}, 
     {"code":"SFO", "city":"San Francisco"}, 
     {"code":"JFK", "city":"New York"},
-]
+];
 
-// googleTrends.trendData('OJ Simpson','US')
-// 	.then(function(results){
-// 	    console.log(results);
-// 	})
-// 	.catch(function(err){
-// 	    console.log(err);
-// });
+googleTrends.trendData('OJ Simpson','US')
+	.then(function(results){
+	    console.log(results);
+	})
+	.catch(function(err){
+	    console.log(err);
+});
 
 // googleTrends.trendData('cheap flight to New York','US')
 // 	.then(function(results){
@@ -74,16 +72,17 @@ var airports = [
 
 
 
-for (i= 0; i < airports.length; i++) {
+// for (i= 0; i < 3; i++) {
 
-	// console.log(airports[i].code + ':' + airports[i].city )
-	googleTrends.trendData('cheap flight to' + airports[i].city,'US')
-		.then(function(results){
-			console.log(results);
-		})
-		.catch(function(err){
-			console.error(err);
-		});
 
-}
+// 	console.log(airports[i].code + ':' + airports[i].city )
+// 	googleTrends.trendData('cheap flight to' + airports[i].city,'US')
+// 		.then(function(results){
+// 			console.log(results);
+// 		})
+// 		.catch(function(err){
+// 			console.error(err);
+// 		});
+
+// }
 
